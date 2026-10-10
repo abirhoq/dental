@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Metadata -->
+  <title>Brightline Dental | Modern Family & Cosmetic Dentistry in Austin, TX</title>
+  <meta name="description" content="Brightline Dental offers gentle, comprehensive dental care in Austin, Texas. Services include routine cleanings, whitening, implants, Invisalign, and emergency care.">
+  <meta name="keywords" content="Dentist Austin TX, Austin dental clinic, cosmetic dentistry Austin, routine cleaning, dental implants, Invisalign Austin">
+  <meta name="author" content="Brightline Dental">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brightline Dental | Modern Family & Cosmetic Dentistry in Austin, TX">
+  <meta property="og:description" content="Gentle, modern dental care for your whole family in downtown Austin, TX. Book your appointment today.">
+  <meta property="og:url" content="https://brightlinedental-concept.example.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon (Clean SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'%3E%3Cpath d='M12 2C8.5 2 5.5 4 5.5 7.5C5.5 10 7 12 7.5 15C8 18 8.5 22 10.5 22C12 22 12 18.5 12 17C12 18.5 12 22 13.5 22C15.5 22 16 18 16.5 15C17 12 18.5 10 18.5 7.5C18.5 4 15.5 2 12 2Z'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Local Business Schema (JSON-LD) for Austin Dental Clinic -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Brightline Dental",
+    "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
+    "description": "Brightline Dental offers gentle, comprehensive dental care in Austin, Texas. Services include routine cleanings, whitening, implants, Invisalign, and emergency care.",
+    "telephone": "+1-512-555-0199",
+    "email": "hello@brightlinedental.com",
+    "url": "https://brightlinedental-concept.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1204 Congress Ave",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "postalCode": "78701",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.2747,
+      "longitude": -97.7404
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday"],
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
+    "priceRange": "$$",
+    "medicalSpecialty": "Dentistry",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Insurance"
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       1. CSS RESET & DESIGN SYSTEM VARIABLES
+       ========================================================================== */
+    :root {
+      /* Backgrounds & Neutrals */
+      --color-white: #ffffff;
+      --color-bg-subtle: #f8fafc;
+      --color-bg-muted: #f1f5f9;
+      --color-border: #e2e8f0;
+      --color-border-strong: #cbd5e1;
+      
+      /* Typography Colors */
+      --color-slate-900: #0f172a; /* Deep Slate Headings */
+      --color-slate-700: #334155; /* Darkened Slate Text for Maximum Readability */
+      --color-slate-600: #475569; /* Body Regular */
+      --color-slate-500: #64748b; /* Captions & Icons */
+      
+      /* Medical Theme Accent (Calm Medical Blue) */
+      --color-primary: #0284c7;
+      --color-primary-hover: #0369a1;
+      --color-primary-tint: #f0f9ff;   /* Soft Ice Blue */
+      --color-primary-light: #e0f2fe;
+      --color-primary-border: #bae6fd;
+      
+      --color-error: #dc2626;
+      --color-error-bg: #fef2f2;
+      --color-error-border: #fecaca;
+      
+      /* Typography */
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      
+      /* Shadows & Border Radius */
+      --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+      --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      --transition-default: all 0.3s ease;
+      --container-max-w: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-slate-700);
+      background-color: var(--color-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    /* Accessibility Focus Rings */
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+    }
+
+    /* Screen Reader Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 1rem;
+      background: var(--color-slate-900);
+      color: var(--color-white);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      z-index: 9999;
+      font-weight: 600;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* ==========================================================================
+       2. REUSABLE UTILITIES & TYPOGRAPHY
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: var(--container-max-w);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    .section-py {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .section-py {
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
+      }
+    }
+
+    .bg-subtle {
+      background-color: var(--color-bg-subtle);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    /* Refined Bolder Badge with High Contrast */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.95rem;
+      background-color: var(--color-primary-tint);
+      color: #0369a1;
+      border: 1px solid var(--color-primary-border);
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 2px rgba(2, 132, 199, 0.05);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      line-height: 1.25;
+      color: var(--color-slate-900);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.375rem;
+      }
+    }
+
+    .section-description {
+      font-size: 1.0625rem;
+      color: var(--color-slate-600);
+      line-height: 1.65;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition-default);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: var(--color-white);
+      color: var(--color-slate-700);
+      border-color: var(--color-border);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--color-bg-subtle);
+      border-color: var(--color-border-strong);
+      color: var(--color-slate-900);
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1.15rem;
+      font-size: 0.875rem;
+    }
+
+    /* ==========================================================================
+       3. STICKY HEADER
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      transition: var(--transition-default);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-slate-900);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--radius-md);
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-icon svg {
+      width: 1.35rem;
+      height: 1.35rem;
+    }
+
+    /* Desktop Navigation */
+    .nav-desktop {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+        align-items: center;
+        gap: 1.75rem;
+      }
+      .nav-desktop a {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--color-slate-600);
+        transition: var(--transition-default);
+      }
+      .nav-desktop a:hover {
+        color: var(--color-primary);
+      }
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-phone-link {
+      display: none;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-slate-700);
+      transition: var(--transition-default);
+    }
+
+    .header-phone-link:hover {
+      color: var(--color-primary);
+    }
+
+    @media (min-width: 640px) {
+      .header-phone-link {
+        display: inline-flex;
+      }
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background: var(--color-white);
+      color: var(--color-slate-700);
+      cursor: pointer;
+      transition: var(--transition-default);
+    }
+
+    .mobile-menu-btn:hover {
+      background: var(--color-bg-subtle);
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      display: none;
+      position: absolute;
+      top: 4.5rem;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .mobile-drawer.is-open {
+      display: block;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav-links a {
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--color-slate-700);
+      padding: 0.25rem 0;
+    }
+
+    .mobile-nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding-top: 3.5rem;
+      padding-bottom: 4.5rem;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      position: relative;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-section {
+        padding-top: 5rem;
+        padding-bottom: 6.5rem;
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 4rem;
+      }
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .hero-headline {
+      font-size: 2.25rem;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--color-slate-900);
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-headline {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-headline {
+        font-size: 3.25rem;
+      }
+    }
+
+    .hero-subheadline {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--color-slate-600);
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 480px) {
+      .hero-cta-group {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--color-slate-700);
+      font-weight: 500;
+    }
+
+    .highlight-icon {
+      color: var(--color-primary);
+      width: 1.15rem;
+      height: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image-container {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--color-border);
+      background-color: var(--color-bg-subtle);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-image {
+        height: 480px;
+      }
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: -1rem;
+      left: 1rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.875rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      box-shadow: var(--shadow-lg);
+      max-width: calc(100% - 2rem);
+    }
+
+    .floating-card-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .floating-card-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-slate-900);
+      line-height: 1.3;
+    }
+
+    .floating-card-sub {
+      font-size: 0.75rem;
+      color: var(--color-slate-500);
+    }
+
+    /* ==========================================================================
+       5. SERVICES SECTION (6 CARDS GRID)
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .service-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: var(--transition-default);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      border-color: var(--color-primary-border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon-box {
+      width: 3.25rem;
+      height: 3.25rem;
+      border-radius: var(--radius-md);
+      background-color: var(--color-bg-subtle);
+      border: 1px solid var(--color-border);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: var(--transition-default);
+    }
+
+    .service-card:hover .service-icon-box {
+      background-color: var(--color-primary-light);
+      border-color: var(--color-primary-border);
+    }
+
+    .service-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-slate-900);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* Enhanced contrast: darkened to slate gray #334155 */
+    .service-card-text {
+      font-size: 0.9375rem;
+      color: var(--color-slate-700);
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      transition: var(--transition-default);
+    }
+
+    .service-card-link:hover {
+      color: var(--color-primary-hover);
+      gap: 0.55rem;
+    }
+
+    /* ==========================================================================
+       6. WHY CHOOSE US SECTION
+       ========================================================================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 1.75rem;
+      position: relative;
+      transition: var(--transition-default);
+    }
+
+    .feature-card:hover {
+      border-color: var(--color-primary-border);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .feature-number {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: var(--color-primary-light);
+      width: 2rem;
+      height: 2rem;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-slate-900);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-text {
+      font-size: 0.9375rem;
+      color: var(--color-slate-700);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       7. MEET THE TEAM SECTION
+       ========================================================================== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .team-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition-default);
+    }
+
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-primary-border);
+    }
+
+    .team-photo-container {
+      position: relative;
+      background: var(--color-bg-muted);
+      height: 320px;
+      overflow: hidden;
+    }
+
+    .team-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+
+    .team-card:hover .team-photo {
+      transform: scale(1.03);
+    }
+
+    .team-details {
+      padding: 1.5rem;
+    }
+
+    .team-name {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      color: var(--color-slate-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-size: 0.875rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-bio {
+      font-size: 0.875rem;
+      color: var(--color-slate-700);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       8. FAQ SECTION (ACCORDION WITH CLEAN SUBTLE BORDERS)
+       ========================================================================== */
+    .faq-container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .accordion-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+      transition: var(--transition-default);
+    }
+
+    .accordion-item:hover {
+      border-color: var(--color-border-strong);
+    }
+
+    .accordion-item.is-active {
+      border-color: var(--color-primary-border);
+      box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.08);
+    }
+
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      color: var(--color-slate-900);
+      font-size: 1.0625rem;
+      font-weight: 600;
+      transition: var(--transition-default);
+    }
+
+    .accordion-header:hover {
+      color: var(--color-primary);
+    }
+
+    .accordion-item.is-active .accordion-header {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .accordion-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--color-slate-500);
+      flex-shrink: 0;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .accordion-item.is-active .accordion-icon {
+      transform: rotate(180deg);
+      color: var(--color-primary);
+    }
+
+    .accordion-content {
+      padding: 1.25rem 1.5rem;
+      color: var(--color-slate-700);
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      background-color: #fafbfc;
+    }
+
+    .accordion-content.hidden {
+      display: none;
+    }
+
+    /* ==========================================================================
+       9. BOOKING FORM SECTION (REFINED BLUE THEME NOTIFICATION)
+       ========================================================================== */
+    .booking-section {
+      background-color: var(--color-white);
+    }
+
+    .booking-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 640px) {
+      .booking-card {
+        padding: 3rem 2.5rem;
+      }
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-slate-900);
+    }
+
+    .form-label .required {
+      color: var(--color-error);
+      margin-left: 2px;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background-color: var(--color-white);
+      color: var(--color-slate-900);
+      font-size: 0.9375rem;
+      transition: var(--transition-default);
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+      outline: none;
+    }
+
+    .form-input.is-invalid, .form-select.is-invalid, .form-textarea.is-invalid {
+      border-color: var(--color-error);
+      background-color: var(--color-error-bg);
+    }
+
+    .form-error-msg {
+      font-size: 0.75rem;
+      color: var(--color-error);
+      display: none;
+      font-weight: 500;
+    }
+
+    .form-error-msg.visible {
+      display: block;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-footer {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .form-privacy-note {
+      font-size: 0.8125rem;
+      color: var(--color-slate-500);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Refined Submit Button: Full-width on mobile, prominent on desktop */
+    .form-submit-btn {
+      width: 100%;
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+    }
+
+    @media (min-width: 640px) {
+      .form-submit-btn {
+        width: auto;
+        min-width: 240px;
+      }
+    }
+
+    /* Refined Success Notification: Calm Blue Theme */
+    .form-alert {
+      display: none;
+      padding: 1.15rem 1.25rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.75rem;
+      font-size: 0.9375rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-alert.alert-success {
+      background-color: var(--color-primary-tint);
+      border: 1px solid var(--color-primary-border);
+      color: #0369a1;
+      display: none;
+      align-items: flex-start;
+      gap: 0.875rem;
+    }
+
+    .form-alert.alert-success strong {
+      color: #0c4a6e;
+    }
+
+    .form-alert.alert-success .alert-icon {
+      color: var(--color-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       10. LOCATION & OPERATING HOURS SECTION
+       ========================================================================== */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 1024px) {
+      .location-grid {
+        grid-template-columns: 1fr 1.15fr;
+      }
+    }
+
+    .contact-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-block {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-block-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--radius-md);
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-block-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-slate-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-block-content p, .contact-block-content a {
+      font-size: 0.9375rem;
+      color: var(--color-slate-700);
+    }
+
+    .contact-block-content a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Hours Table */
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9375rem;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 0.65rem 0;
+    }
+
+    .hours-table td:first-child {
+      font-weight: 600;
+      color: var(--color-slate-800);
+    }
+
+    .hours-table td:last-child {
+      text-align: right;
+      color: var(--color-slate-600);
+    }
+
+    .hours-table .closed-badge {
+      color: var(--color-slate-500);
+      font-style: italic;
+    }
+
+    /* Map Box */
+    .map-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 420px;
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      flex-grow: 1;
+      width: 100%;
+      min-height: 340px;
+      background-color: var(--color-bg-muted);
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(10%) contrast(102%);
+    }
+
+    .map-meta-bar {
+      padding: 1.25rem 1.5rem;
+      background: var(--color-white);
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .map-meta-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .map-location-tag {
+      font-size: 0.875rem;
+      color: var(--color-slate-700);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--color-slate-900);
+      color: #94a3b8;
+      padding-top: 4.5rem;
+      padding-bottom: 2.5rem;
+      font-size: 0.9375rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1.75fr 1fr 1fr 1.25fr;
+        gap: 3rem;
+      }
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-brand-desc {
+      line-height: 1.6;
+      color: #94a3b8;
+      max-width: 320px;
+    }
+
+    .footer-heading {
+      color: var(--color-white);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .footer-highlight-note {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    /* Print styles */
+    @media print {
+      .site-header, .btn, .mobile-menu-btn, .booking-card {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Reader Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       A. STICKY HEADER
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo / Clinic Name -->
+        <a href="#" class="brand-logo" aria-label="Brightline Dental Homepage">
+          <span class="brand-icon" aria-hidden="true">
+            <!-- Modern Tooth + Sparkle SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.5 2 6 4 6 7.5C6 10 7.5 12 8 15C8.5 18 9 22 10.5 22C11.8 22 12 18.5 12 17C12 18.5 12.2 22 13.5 22C15 22 15.5 18 16 15C16.5 12 18 10 18 7.5C18 4 15.5 2 12 2Z"/>
+              <path d="M9 7c1-1 3-1 3-1"/>
+            </svg>
+          </span>
+          <span>Brightline Dental</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop" aria-label="Main Navigation">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Choose Us</a>
+          <a href="#team">Our Doctors</a>
+          <a href="#faq">FAQ</a>
+          <a href="#location">Hours &amp; Location</a>
+        </nav>
+
+        <!-- Header Actions: Phone & Book Appointment CTA -->
+        <div class="header-actions">
+          <a href="tel:5125550199" class="header-phone-link" aria-label="Call Brightline Dental at (512) 555-0199">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>(512) 555-0199</span>
+          </a>
+
+          <a href="#booking" class="btn btn-primary btn-sm">Book Appointment</a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <svg id="hamburgerIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg id="closeIcon" style="display:none;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#why-us" class="mobile-nav-link">Why Choose Us</a>
+        <a href="#team" class="mobile-nav-link">Our Doctors</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <a href="#location" class="mobile-nav-link">Hours &amp; Location</a>
+        <a href="tel:5125550199" class="mobile-nav-link" style="color:var(--color-primary); font-weight:600;">
+          📞 (512) 555-0199
+        </a>
+      </nav>
+      <a href="#booking" class="btn btn-primary" style="width:100%;" id="mobileBookBtn">Book Appointment</a>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ========================================================================
+         B. HERO SECTION
+         ======================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              Austin, Texas • Downtown Clinic
+            </span>
+            <h1 id="hero-heading" class="hero-headline">Gentle, Modern Dental Care for Your Whole Family</h1>
+            <p class="hero-subheadline">
+              Providing compassionate, high-quality oral healthcare in Austin, Texas. From preventive checkups to advanced restorations, our clinic is built around your comfort and health.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#booking" class="btn btn-primary">Schedule Your Visit</a>
+              <a href="#services" class="btn btn-outline">Explore Treatments</a>
+            </div>
+
+            <!-- Authentic value highlights -->
+            <div class="hero-highlights">
+              <div class="highlight-item">
+                <svg class="highlight-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Same-Week Appointments</span>
+              </div>
+              <div class="highlight-item">
+                <svg class="highlight-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Most Major Insurances Accepted</span>
+              </div>
+              <div class="highlight-item">
+                <svg class="highlight-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Comfort-First Technology</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image & Quality Indicator -->
+          <div class="hero-image-wrapper">
+            <div class="hero-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" 
+                alt="Bright, serene, and modern interior of Brightline Dental treatment operatory in Austin TX" 
+                class="hero-image"
+                loading="eager"
+              >
+            </div>
+            
+            <div class="hero-floating-card">
+              <div class="floating-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="floating-card-title">Patient Comfort Guarantee</div>
+                <div class="floating-card-sub">Gentle touch &amp; low-stress visits</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         C. SERVICES SECTION (6 CARDS GRID)
+         ======================================================================== -->
+    <section id="services" class="section-py bg-subtle" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- Bolder High-Contrast Section Badge -->
+          <span class="badge">OUR SERVICES</span>
+          <h2 id="services-heading" class="section-title">Personalized Dental Services for Every Stage of Life</h2>
+          <p class="section-description">
+            From routine preventive checkups to advanced smile restoration, our experienced team provides thorough and gentle treatments under one roof.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Routine Cleaning & Exams -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a4 4 0 0 0-4 4v1H6a2 2 0 0 0-2 2v9a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/>
+                <path d="m9 14 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">1. Routine Cleaning &amp; Exams</h3>
+            <p class="service-card-text">
+              Thorough plaque removal, gentle ultrasonic scaling, digital cavity screening, and proactive periodontal evaluations to keep your teeth and gums vibrant.
+            </p>
+            <a href="#booking" class="service-card-link">Schedule exam <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Service 2: Professional Teeth Whitening -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">2. Professional Teeth Whitening</h3>
+            <p class="service-card-text">
+              In-office whitening and tailored take-home trays formulated with enamel-safe brightening agents to lift stubborn discoloration with minimal tooth sensitivity.
+            </p>
+            <a href="#booking" class="service-card-link">Brighten your smile <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Service 3: Dental Implants -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v6"/>
+                <path d="m4.93 10.93 4.24 4.24"/>
+                <path d="M2 18h6"/>
+                <path d="M18 18h4"/>
+                <path d="m14.83 15.17 4.24-4.24"/>
+                <circle cx="12" cy="18" r="4"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">3. Dental Implants</h3>
+            <p class="service-card-text">
+              Permanent, natural-looking tooth replacements. Using precise 3D cone-beam scans, we place durable titanium posts and custom porcelain crowns.
+            </p>
+            <a href="#booking" class="service-card-link">Explore implants <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Service 4: Invisalign Clear Aligners -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+                <path d="M4 12c0 4.4 3.6 8 8 8s8-3.6 8-8"/>
+                <path d="M8 12h8"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">4. Invisalign Clear Aligners</h3>
+            <p class="service-card-text">
+              Straighten misaligned teeth discreetly without metal brackets or wires. Enjoy removable trays that let you eat, brush, and floss with complete ease.
+            </p>
+            <a href="#booking" class="service-card-link">Consult on aligners <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Service 5: Emergency Dental Care -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">5. Emergency Dental Care</h3>
+            <p class="service-card-text">
+              Fast, attentive relief for chipped teeth, severe toothaches, lost fillings, and oral trauma. We reserve dedicated daily slots for immediate acute care.
+            </p>
+            <a href="#booking" class="service-card-link">Get urgent relief <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Service 6: Pediatric & Kids Dentistry -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/>
+                <path d="M9 10h.01"/>
+                <path d="M15 10h.01"/>
+                <path d="M9.5 15a3.5 3.5 0 0 0 5 0"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">6. Pediatric &amp; Kids Dentistry</h3>
+            <p class="service-card-text">
+              Gentle, stress-free appointments designed to build lifelong healthy oral habits for toddlers, children, and teens with positive, fun reinforcement.
+            </p>
+            <a href="#booking" class="service-card-link">Family appointments <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         D. WHY CHOOSE US SECTION (EXACTLY 3 FACTUAL/VALUE POINTS)
+         ======================================================================== -->
+    <section id="why-us" class="section-py" aria-labelledby="why-us-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- Bolder High-Contrast Section Badge -->
+          <span class="badge">WHY CHOOSE US</span>
+          <h2 id="why-us-heading" class="section-title">A Thoughtful Approach to Dental Health</h2>
+          <p class="section-description">
+            We focus on authentic patient care, transparent medical communication, and modern clinical techniques.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Point 1 -->
+          <div class="feature-card">
+            <div class="feature-number" aria-hidden="true">01</div>
+            <h3 class="feature-title">Patient-Centered Comfort</h3>
+            <p class="feature-text">
+              Gentle clinical techniques and a calm, relaxing office environment. We provide cozy amenities, warm blankets, and unhurried appointments to ensure you feel at ease throughout every procedure.
+            </p>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="feature-card">
+            <div class="feature-number" aria-hidden="true">02</div>
+            <h3 class="feature-title">Transparent Communication</h3>
+            <p class="feature-text">
+              Clear treatment plans with no unexpected fees. Before beginning any procedure, our team reviews each recommended step, your insurance coverage details, and transparent out-of-pocket costs.
+            </p>
+          </div>
+
+          <!-- Point 3 -->
+          <div class="feature-card">
+            <div class="feature-number" aria-hidden="true">03</div>
+            <h3 class="feature-title">Modern Dental Technology</h3>
+            <p class="feature-text">
+              Digital imaging, low-radiation radiography, and efficient intraoral scanning for a smoother, quicker visit. High-precision diagnostics allow for earlier detection and minimally invasive treatments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         E. MEET THE TEAM SECTION (ALL 3 DOCTOR IMAGES CLEAN, TESTED & CONSISTENT)
+         ======================================================================== -->
+    <section id="team" class="section-py bg-subtle" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- Bolder High-Contrast Section Badge -->
+          <span class="badge">OUR CARE TEAM</span>
+          <h2 id="team-heading" class="section-title">Meet Our Experienced Care Team</h2>
+          <p class="section-description">
+            Our clinicians are committed to continuing education, compassionate care, and personalized treatment plans for every patient who walks through our doors.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Doctor 1: Dr. Alex Mercer -->
+          <article class="team-card">
+            <div class="team-photo-container">
+              <img 
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" 
+                alt="Portrait of Dr. Alex Mercer, General Dentist at Brightline Dental in Austin" 
+                class="team-photo"
+                loading="lazy"
+              >
+            </div>
+            <div class="team-details">
+              <h3 class="team-name">Dr. Alex Mercer</h3>
+              <p class="team-role">General Dentist</p>
+              <p class="team-bio">
+                Focuses on comprehensive preventive dentistry, restorative procedures, and empowering patients with practical daily oral hygiene strategies.
+              </p>
+            </div>
+          </article>
+
+          <!-- Doctor 2: Dr. Sarah Chen (FIXED: High-quality, verified medical portrait with neutral background) -->
+          <article class="team-card">
+            <div class="team-photo-container">
+              <img 
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" 
+                alt="Portrait of Dr. Sarah Chen, Cosmetic Dentist at Brightline Dental in Austin" 
+                class="team-photo"
+                loading="lazy"
+              >
+            </div>
+            <div class="team-details">
+              <h3 class="team-name">Dr. Sarah Chen</h3>
+              <p class="team-role">Cosmetic Dentist</p>
+              <p class="team-bio">
+                Specializes in aesthetic smile design, ceramic veneers, and minimally invasive bonding with an eye for natural harmony and functional stability.
+              </p>
+            </div>
+          </article>
+
+          <!-- Doctor 3: Dr. Marcus Vance -->
+          <article class="team-card">
+            <div class="team-photo-container">
+              <img 
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800" 
+                alt="Portrait of Dr. Marcus Vance, Orthodontics Specialist at Brightline Dental in Austin" 
+                class="team-photo"
+                loading="lazy"
+              >
+            </div>
+            <div class="team-details">
+              <h3 class="team-name">Dr. Marcus Vance</h3>
+              <p class="team-role">Orthodontics Specialist</p>
+              <p class="team-bio">
+                Dedicated to digital orthodontic planning, Invisalign aligners, and bite balance correction for both teen and adult smiles.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         F. FAQ SECTION (ACCORDION STYLE WITH CLEAN SUBTLE BORDERS)
+         ======================================================================== -->
+    <section id="faq" class="section-py" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- Bolder High-Contrast Section Badge -->
+          <span class="badge">FREQUENT QUESTIONS</span>
+          <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+          <p class="section-description">
+            Everything you need to know about scheduling, dental insurance, treatment expectations, and preparing for your appointment.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <div class="accordion-list" role="region" aria-label="Frequently Asked Questions Accordion">
+            
+            <!-- Question 1 -->
+            <div class="accordion-item is-active">
+              <button type="button" class="accordion-header" id="faq-btn-1" aria-expanded="true" aria-controls="faq-panel-1">
+                <span>1. How often should I visit the dentist?</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="faq-panel-1" class="accordion-content" role="region" aria-labelledby="faq-btn-1">
+                <p>
+                  Most patients benefit from visiting every six months for a professional cleaning and examination. Patients with a history of periodontal disease, frequent cavities, or specific systemic medical conditions may be advised to visit every three to four months for closer monitoring.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-header" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
+                <span>2. What should I do during a dental emergency?</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="faq-panel-2" class="accordion-content hidden" role="region" aria-labelledby="faq-btn-2">
+                <p>
+                  If you have a knocked-out tooth, rinse it gently with milk or saline (avoid scrubbing the root) and attempt to reinsert it into the socket, or store it in a container of cold milk. Call our office immediately at (512) 555-0199. For uncontrolled bleeding or suspected jaw fractures, visit the nearest emergency room.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-header" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
+                <span>3. Do you accept dental insurance?</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="faq-panel-3" class="accordion-content hidden" role="region" aria-labelledby="faq-btn-3">
+                <p>
+                  Yes, we accept and file claims with most major PPO dental plans. Our front office staff will verify your benefits in advance and provide an itemized breakdown of expected insurance contribution versus estimated patient co-pays before any treatment begins.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-header" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
+                <span>4. How long does a teeth whitening treatment take?</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="faq-panel-4" class="accordion-content hidden" role="region" aria-labelledby="faq-btn-4">
+                <p>
+                  Our in-office whitening procedure takes approximately 60 to 90 minutes from start to finish. For patients selecting custom take-home whitening trays, daily applications usually produce noticeable shade improvements within 7 to 14 days.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-header" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
+                <span>5. What age should a child first see a dentist?</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="faq-panel-5" class="accordion-content hidden" role="region" aria-labelledby="faq-btn-5">
+                <p>
+                  In alignment with the American Academy of Pediatric Dentistry, we recommend bringing your child in when their first tooth erupts or by their first birthday. Early visits focus on quick, friendly examinations and educating parents on decay prevention.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-header" id="faq-btn-6" aria-expanded="false" aria-controls="faq-panel-6">
+                <span>6. How do I prepare for my first appointment?</span>
+                <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div id="faq-panel-6" class="accordion-content hidden" role="region" aria-labelledby="faq-btn-6">
+                <p>
+                  Please bring your government ID, dental insurance card (if applicable), and an updated list of current medications. Arriving 10 minutes early allows you to complete our brief digital intake form. If you have recent dental X-rays from a prior clinic, you can request them to be emailed to us prior to your arrival.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         G. BOOKING FORM SECTION (REFINED CALM BLUE SUCCESS THEME & FULL-WIDTH BUTTON)
+         ======================================================================== -->
+    <section id="booking" class="section-py bg-subtle booking-section" aria-labelledby="booking-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- Bolder High-Contrast Section Badge -->
+          <span class="badge">ONLINE APPOINTMENTS</span>
+          <h2 id="booking-heading" class="section-title">Schedule Your Visit Online</h2>
+          <p class="section-description">
+            Complete the form below to request a convenient appointment time. Our scheduling coordinator will confirm your visit via email or phone within 24 business hours.
+          </p>
+        </div>
+
+        <div class="booking-card">
+          <!-- Submission feedback banner: Calm Blue Theme (#f0f9ff / #0284c7) -->
+          <div id="bookingAlertSuccess" class="form-alert alert-success" role="status" aria-live="polite">
+            <svg class="alert-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <div>
+              <strong>Appointment Request Received!</strong>
+              <p style="margin-top:0.35rem; color:#0369a1;">Thank you, <strong id="bookedClientName" style="color:#0c4a6e;"></strong>. We have logged your request for <strong id="bookedService" style="color:#0c4a6e;"></strong> on <strong id="bookedDate" style="color:#0c4a6e;"></strong>. Our Austin clinical team will contact you shortly to confirm your slot.</p>
+            </div>
+          </div>
+
+          <form id="appointmentForm" novalidate>
+            <div class="form-grid">
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  class="form-input" 
+                  placeholder="e.g. Eleanor Vance" 
+                  required 
+                  autocomplete="name"
+                  aria-describedby="fullNameError"
+                >
+                <span id="fullNameError" class="form-error-msg">Please enter your full name.</span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="name@example.com" 
+                  required 
+                  autocomplete="email"
+                  aria-describedby="emailError"
+                >
+                <span id="emailError" class="form-error-msg">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-input" 
+                  placeholder="(512) 555-0100" 
+                  required 
+                  autocomplete="tel"
+                  aria-describedby="phoneError"
+                >
+                <span id="phoneError" class="form-error-msg">Please enter a 10-digit phone number.</span>
+              </div>
+
+              <!-- Service Dropdown -->
+              <div class="form-group">
+                <label for="serviceSelect" class="form-label">Desired Service <span class="required" aria-hidden="true">*</span></label>
+                <select id="serviceSelect" name="serviceSelect" class="form-select" required aria-describedby="serviceError">
+                  <option value="" disabled selected>Select a treatment...</option>
+                  <option value="Routine Cleaning & Exams">1. Routine Cleaning &amp; Exams</option>
+                  <option value="Professional Teeth Whitening">2. Professional Teeth Whitening</option>
+                  <option value="Dental Implants">3. Dental Implants</option>
+                  <option value="Invisalign Clear Aligners">4. Invisalign Clear Aligners</option>
+                  <option value="Emergency Dental Care">5. Emergency Dental Care</option>
+                  <option value="Pediatric & Kids Dentistry">6. Pediatric &amp; Kids Dentistry</option>
+                </select>
+                <span id="serviceError" class="form-error-msg">Please choose a service.</span>
+              </div>
+
+              <!-- Preferred Date -->
+              <div class="form-group">
+                <label for="preferredDate" class="form-label">Preferred Date <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="date" 
+                  id="preferredDate" 
+                  name="preferredDate" 
+                  class="form-input" 
+                  required 
+                  aria-describedby="dateError"
+                >
+                <span id="dateError" class="form-error-msg">Please select an upcoming date.</span>
+              </div>
+
+              <!-- Preferred Time Window -->
+              <div class="form-group">
+                <label for="timeWindow" class="form-label">Preferred Time Window</label>
+                <select id="timeWindow" name="timeWindow" class="form-select">
+                  <option value="Morning (8:00 AM - 11:30 AM)">Morning (8:00 AM - 11:30 AM)</option>
+                  <option value="Early Afternoon (12:00 PM - 2:30 PM)">Early Afternoon (12:00 PM - 2:30 PM)</option>
+                  <option value="Late Afternoon (2:30 PM - 5:00 PM)">Late Afternoon (2:30 PM - 5:00 PM)</option>
+                </select>
+              </div>
+
+              <!-- Additional Message / Notes -->
+              <div class="form-group full-width">
+                <label for="message" class="form-label">Additional Message / Dental Concerns</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-textarea" 
+                  rows="3" 
+                  placeholder="Tell us if you are experiencing tooth pain, have insurance questions, or prefer a particular dentist..."
+                ></textarea>
+              </div>
+
+            </div>
+
+            <div class="form-footer">
+              <p class="form-privacy-note">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; flex-shrink:0;">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Your personal health information is kept strictly confidential.</span>
+              </p>
+              <!-- Full-width mobile / prominent desktop button -->
+              <button type="submit" class="btn btn-primary form-submit-btn" id="submitBookingBtn">
+                Schedule Your Visit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         H. LOCATION & OPERATING HOURS SECTION
+         ======================================================================== -->
+    <section id="location" class="section-py" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- Bolder High-Contrast Section Badge -->
+          <span class="badge">VISIT OUR CLINIC</span>
+          <h2 id="location-heading" class="section-title">Convenient Downtown Austin Location</h2>
+          <p class="section-description">
+            Centrally located on Congress Avenue with dedicated patient parking behind our building and convenient access to local transit.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Contact Details & Operating Hours -->
+          <div class="contact-card">
+            
+            <!-- Address Block -->
+            <div class="contact-block">
+              <div class="contact-block-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-block-content">
+                <h3>Our Address</h3>
+                <p>1204 Congress Ave<br>Austin, TX 78701</p>
+                <p style="margin-top:0.25rem; font-size:0.8125rem; color:var(--color-slate-500);">Between 12th &amp; 13th St • Free garage validation</p>
+              </div>
+            </div>
+
+            <!-- Phone & Email Block -->
+            <div class="contact-block">
+              <div class="contact-block-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-block-content">
+                <h3>Direct Inquiries</h3>
+                <p>Phone: <a href="tel:5125550199" style="font-weight:600; color:var(--color-slate-900);">(512) 555-0199</a></p>
+                <p>Email: <a href="mailto:hello@brightlinedental.com">hello@brightlinedental.com</a></p>
+              </div>
+            </div>
+
+            <!-- Operating Hours Table -->
+            <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--color-border);">
+              <h3 style="font-size:1.0625rem; font-weight:700; color:var(--color-slate-900); margin-bottom:0.75rem;">
+                Operating Hours
+              </h3>
+              <table class="hours-table" aria-label="Brightline Dental Weekly Hours">
+                <tbody>
+                  <tr>
+                    <td>Monday &ndash; Thursday</td>
+                    <td>8:00 AM &ndash; 5:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td>8:00 AM &ndash; 2:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday &ndash; Sunday</td>
+                    <td><span class="closed-badge">Closed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <!-- Interactive Map Box -->
+          <div class="map-card">
+            <div class="map-frame-wrapper">
+              <!-- OpenStreetMap embed centered on 1204 Congress Ave, Austin TX -->
+              <iframe 
+                class="map-frame"
+                title="Location Map for Brightline Dental at 1204 Congress Ave, Austin, TX"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-97.745%2C30.270%2C-97.735%2C30.280&amp;layer=mapnik&amp;marker=30.2747%2C-97.7404"
+                loading="lazy"
+                aria-label="Map showing Brightline Dental at 1204 Congress Ave, Austin, Texas"
+              ></iframe>
+            </div>
+            <div class="map-meta-bar">
+              <span class="map-location-tag">📍 1204 Congress Ave, Austin, TX 78701</span>
+              <a 
+                href="https://maps.google.com/?q=1204+Congress+Ave,+Austin,+TX+78701" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-outline btn-sm"
+              >
+                Open in Google Maps &nearr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       I. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div>
+          <div class="footer-brand-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary-light);">
+              <path d="M12 2C8.5 2 6 4 6 7.5C6 10 7.5 12 8 15C8.5 18 9 22 10.5 22C11.8 22 12 18.5 12 17C12 18.5 12.2 22 13.5 22C15 22 15.5 18 16 15C16.5 12 18 10 18 7.5C18 4 15.5 2 12 2Z"/>
+            </svg>
+            <span>Brightline Dental</span>
+          </div>
+          <p class="footer-brand-desc">
+            Gentle, comprehensive family and cosmetic dental care in Austin, Texas. Focused on modern technology, prevention, and patient comfort.
+          </p>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Clinical Services</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#team">Our Doctors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#booking">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Dental Services -->
+        <div>
+          <h4 class="footer-heading">Treatments</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Routine Exams</a></li>
+            <li><a href="#services">Teeth Whitening</a></li>
+            <li><a href="#services">Dental Implants</a></li>
+            <li><a href="#services">Invisalign Clear Aligners</a></li>
+            <li><a href="#services">Emergency Dentistry</a></li>
+          </ul>
+        </div>
+
+        <!-- Clinic Details -->
+        <div>
+          <h4 class="footer-heading">Clinic Contact</h4>
+          <ul class="footer-links">
+            <li>1204 Congress Ave</li>
+            <li>Austin, TX 78701</li>
+            <li><a href="tel:5125550199">(512) 555-0199</a></li>
+            <li><a href="mailto:hello@brightlinedental.com">hello@brightlinedental.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar with EXACT Required Attribution Line -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Brightline Dental Clinic. All rights reserved.</p>
+        <!-- EXACT REQUIRED LINE -->
+        <p class="footer-highlight-note">Concept project by Abir Hoq</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Set current year dynamically in footer
+      const currentYearEl = document.getElementById('currentYear');
+      if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+      }
+
+      // 2. Set min date for the appointment date picker (cannot book past dates)
+      const preferredDateInput = document.getElementById('preferredDate');
+      if (preferredDateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        preferredDateInput.min = today;
+      }
+
+      // 3. Mobile Navigation Drawer Toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const hamburgerIcon = document.getElementById('hamburgerIcon');
+      const closeIcon = document.getElementById('closeIcon');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link, #mobileBookBtn');
+
+      function toggleMobileMenu() {
+        const isOpen = mobileDrawer.classList.toggle('is-open');
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+        if (isOpen) {
+          hamburgerIcon.style.display = 'none';
+          closeIcon.style.display = 'block';
+        } else {
+          hamburgerIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
+      }
+
+      if (mobileMenuToggle && mobileDrawer) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Close drawer when any mobile nav link is tapped
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('is-open')) {
+              toggleMobileMenu();
+            }
+          });
+        });
+      }
+
+      // 4. Accessible Accordion for FAQ Section
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.closest('.accordion-item');
+          const content = header.nextElementSibling;
+          const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+          // Close all other accordions for clean single-view accordion behavior
+          accordionHeaders.forEach(otherHeader => {
+            if (otherHeader !== header) {
+              const otherItem = otherHeader.closest('.accordion-item');
+              const otherContent = otherHeader.nextElementSibling;
+              otherHeader.setAttribute('aria-expanded', 'false');
+              otherItem.classList.remove('is-active');
+              otherContent.classList.add('hidden');
+            }
+          });
+
+          // Toggle clicked item
+          if (isExpanded) {
+            header.setAttribute('aria-expanded', 'false');
+            item.classList.remove('is-active');
+            content.classList.add('hidden');
+          } else {
+            header.setAttribute('aria-expanded', 'true');
+            item.classList.add('is-active');
+            content.classList.remove('hidden');
+          }
+        });
+      });
+
+      // 5. Booking Form Validation & Interactive Feedback
+      const bookingForm = document.getElementById('appointmentForm');
+      const successAlert = document.getElementById('bookingAlertSuccess');
+      const bookedClientName = document.getElementById('bookedClientName');
+      const bookedService = document.getElementById('bookedService');
+      const bookedDate = document.getElementById('bookedDate');
+
+      const nameInput = document.getElementById('fullName');
+      const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+      const serviceInput = document.getElementById('serviceSelect');
+      const dateInput = document.getElementById('preferredDate');
+
+      // Helper to validate email format
+      function isValidEmail(val) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      }
+
+      // Helper to validate phone format (minimum 10 digits)
+      function isValidPhone(val) {
+        const digits = val.replace(/\D/g, '');
+        return digits.length >= 10;
+      }
+
+      // Individual field validator
+      function validateField(input, isValid, errorElementId) {
+        const errorEl = document.getElementById(errorElementId);
+        if (!isValid) {
+          input.classList.add('is-invalid');
+          if (errorEl) errorEl.classList.add('visible');
+          return false;
+        } else {
+          input.classList.remove('is-invalid');
+          if (errorEl) errorEl.classList.remove('visible');
+          return true;
+        }
+      }
+
+      // Realtime input listener to clear validation errors when user types
+      [nameInput, emailInput, phoneInput, serviceInput, dateInput].forEach(field => {
+        if (!field) return;
+        field.addEventListener('input', () => {
+          if (field.classList.contains('is-invalid')) {
+            if (field === nameInput) validateField(nameInput, nameInput.value.trim().length >= 2, 'fullNameError');
+            if (field === emailInput) validateField(emailInput, isValidEmail(emailInput.value.trim()), 'emailError');
+            if (field === phoneInput) validateField(phoneInput, isValidPhone(phoneInput.value.trim()), 'phoneError');
+            if (field === serviceInput) validateField(serviceInput, serviceInput.value !== '', 'serviceError');
+            if (field === dateInput) validateField(dateInput, dateInput.value !== '', 'dateError');
+          }
+        });
+      });
+
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          // Validate all fields
+          const isNameValid = validateField(nameInput, nameInput.value.trim().length >= 2, 'fullNameError');
+          const isEmailValid = validateField(emailInput, isValidEmail(emailInput.value.trim()), 'emailError');
+          const isPhoneValid = validateField(phoneInput, isValidPhone(phoneInput.value.trim()), 'phoneError');
+          const isServiceValid = validateField(serviceInput, serviceInput.value !== '', 'serviceError');
+          const isDateValid = validateField(dateInput, dateInput.value !== '', 'dateError');
+
+          if (isNameValid && isEmailValid && isPhoneValid && isServiceValid && isDateValid) {
+            // Populate success banner details
+            bookedClientName.textContent = nameInput.value.trim();
+            bookedService.textContent = serviceInput.value;
+            bookedDate.textContent = dateInput.value;
+
+            // Show success banner in theme blue styling
+            successAlert.style.display = 'flex';
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Reset form fields
+            bookingForm.reset();
+          } else {
+            // Focus first invalid element
+            const firstInvalid = bookingForm.querySelector('.is-invalid');
+            if (firstInvalid) {
+              firstInvalid.focus();
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
