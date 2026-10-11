@@ -34,7 +34,7 @@
     "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
     "description": "Brightline Dental offers gentle, comprehensive dental care in Austin, Texas. Services include routine cleanings, whitening, implants, Invisalign, and emergency care.",
     "telephone": "+1-512-555-0199",
-    "email": "hello@brightlinedental.com",
+    "email": "hello@brightline-concept.example",
     "url": "https://brightlinedental-concept.example.com",
     "address": {
       "@type": "PostalAddress",
@@ -1103,6 +1103,31 @@
       margin-top: 2px;
     }
 
+    .form-alert.alert-error {
+      background-color: var(--color-error-bg);
+      border: 1px solid var(--color-error-border);
+      color: var(--color-error);
+      display: none;
+      align-items: flex-start;
+      gap: 0.875rem;
+    }
+
+    .form-alert.alert-error strong {
+      color: #991b1b;
+    }
+
+    .form-alert.alert-error .alert-icon {
+      color: var(--color-error);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .text-sm { font-size: 0.875rem; }
+    .text-slate-500 { color: var(--color-slate-500); }
+    .italic { font-style: italic; }
+    .mt-1 { margin-top: 0.25rem; }
+    .text-center { text-align: center; }
+
     /* ==========================================================================
        10. LOCATION & OPERATING HOURS SECTION
        ========================================================================== */
@@ -1495,7 +1520,7 @@
                 </svg>
               </div>
               <div>
-                <div class="floating-card-title">Patient Comfort Guarantee</div>
+                <div class="floating-card-title">Patient-Centered Care</div>
                 <div class="floating-card-sub">Gentle touch &amp; low-stress visits</div>
               </div>
             </div>
@@ -1673,6 +1698,7 @@
           <!-- Bolder High-Contrast Section Badge -->
           <span class="badge">OUR CARE TEAM</span>
           <h2 id="team-heading" class="section-title">Meet Our Experienced Care Team</h2>
+          <p class="text-sm text-slate-500 italic mt-1 text-center">Sample profiles for concept project</p>
           <p class="section-description">
             Our clinicians are committed to continuing education, compassionate care, and personalized treatment plans for every patient who walks through our doors.
           </p>
@@ -1866,7 +1892,7 @@
         </div>
 
         <div class="booking-card">
-          <!-- Submission feedback banner: Calm Blue Theme (#f0f9ff / #0284c7) -->
+          <!-- Submission feedback banner: Success Notification -->
           <div id="bookingAlertSuccess" class="form-alert alert-success" role="status" aria-live="polite">
             <svg class="alert-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -1874,11 +1900,24 @@
             </svg>
             <div>
               <strong>Appointment Request Received!</strong>
-              <p style="margin-top:0.35rem; color:#0369a1;">Thank you, <strong id="bookedClientName" style="color:#0c4a6e;"></strong>. We have logged your request for <strong id="bookedService" style="color:#0c4a6e;"></strong> on <strong id="bookedDate" style="color:#0c4a6e;"></strong>. Our Austin clinical team will contact you shortly to confirm your slot.</p>
+              <p id="bookingSuccessMsg" style="margin-top:0.35rem; color:#0369a1;">Thank you, <strong id="bookedClientName" style="color:#0c4a6e;"></strong>. We have logged your request for <strong id="bookedService" style="color:#0c4a6e;"></strong> on <strong id="bookedDate" style="color:#0c4a6e;"></strong>.</p>
             </div>
           </div>
 
-          <form id="appointmentForm" novalidate>
+          <!-- Submission feedback banner: Error Notification -->
+          <div id="bookingAlertError" class="form-alert alert-error" role="alert" aria-live="assertive">
+            <svg class="alert-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <div>
+              <strong>Submission Error</strong>
+              <p id="bookingErrorMsg" style="margin-top:0.35rem;">Something went wrong while submitting your request. Please call us directly at (512) 555-0199 to schedule your visit.</p>
+            </div>
+          </div>
+
+          <form id="appointmentForm" action="https://formspree.io/f/mnpjzzrw" method="POST" novalidate>
             <div class="form-grid">
               
               <!-- Full Name -->
@@ -2029,7 +2068,7 @@
               <div class="contact-block-content">
                 <h3>Our Address</h3>
                 <p>1204 Congress Ave<br>Austin, TX 78701</p>
-                <p style="margin-top:0.25rem; font-size:0.8125rem; color:var(--color-slate-500);">Between 12th &amp; 13th St • Free garage validation</p>
+                <p style="margin-top:0.25rem; font-size:0.8125rem; color:var(--color-slate-500);">Between 12th &amp; 13th St</p>
               </div>
             </div>
 
@@ -2043,7 +2082,7 @@
               <div class="contact-block-content">
                 <h3>Direct Inquiries</h3>
                 <p>Phone: <a href="tel:5125550199" style="font-weight:600; color:var(--color-slate-900);">(512) 555-0199</a></p>
-                <p>Email: <a href="mailto:hello@brightlinedental.com">hello@brightlinedental.com</a></p>
+                <p>Email: <a href="mailto:hello@brightline-concept.example">hello@brightline-concept.example</a></p>
               </div>
             </div>
 
@@ -2153,7 +2192,7 @@
             <li>1204 Congress Ave</li>
             <li>Austin, TX 78701</li>
             <li><a href="tel:5125550199">(512) 555-0199</a></li>
-            <li><a href="mailto:hello@brightlinedental.com">hello@brightlinedental.com</a></li>
+            <li><a href="mailto:hello@brightline-concept.example">hello@brightline-concept.example</a></li>
           </ul>
         </div>
 
@@ -2251,12 +2290,17 @@
         });
       });
 
-      // 5. Booking Form Validation & Interactive Feedback
-      const bookingForm = document.getElementById('appointmentForm');
+      // 5. Booking Form Validation & Interactive Feedback (Formspree AJAX Integration)
+      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnpjzzrw';
+      const bookingForm = document.getElementById('appointmentForm') || document.getElementById('booking-form');
+      const submitBtn = document.getElementById('submitBookingBtn');
       const successAlert = document.getElementById('bookingAlertSuccess');
+      const errorAlert = document.getElementById('bookingAlertError');
       const bookedClientName = document.getElementById('bookedClientName');
       const bookedService = document.getElementById('bookedService');
       const bookedDate = document.getElementById('bookedDate');
+      const bookingSuccessMsg = document.getElementById('bookingSuccessMsg');
+      const bookingErrorMsg = document.getElementById('bookingErrorMsg');
 
       const nameInput = document.getElementById('fullName');
       const emailInput = document.getElementById('email');
@@ -2304,33 +2348,89 @@
       });
 
       if (bookingForm) {
-        bookingForm.addEventListener('submit', (e) => {
+        bookingForm.addEventListener('submit', async (e) => {
           e.preventDefault();
 
-          // Validate all fields
+          // Retain all existing browser form validation (HTML5 required fields, email/phone format checks)
           const isNameValid = validateField(nameInput, nameInput.value.trim().length >= 2, 'fullNameError');
           const isEmailValid = validateField(emailInput, isValidEmail(emailInput.value.trim()), 'emailError');
           const isPhoneValid = validateField(phoneInput, isValidPhone(phoneInput.value.trim()), 'phoneError');
           const isServiceValid = validateField(serviceInput, serviceInput.value !== '', 'serviceError');
           const isDateValid = validateField(dateInput, dateInput.value !== '', 'dateError');
 
-          if (isNameValid && isEmailValid && isPhoneValid && isServiceValid && isDateValid) {
-            // Populate success banner details
-            bookedClientName.textContent = nameInput.value.trim();
-            bookedService.textContent = serviceInput.value;
-            bookedDate.textContent = dateInput.value;
-
-            // Show success banner in theme blue styling
-            successAlert.style.display = 'flex';
-            successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-            // Reset form fields
-            bookingForm.reset();
-          } else {
+          if (!(isNameValid && isEmailValid && isPhoneValid && isServiceValid && isDateValid)) {
             // Focus first invalid element
             const firstInvalid = bookingForm.querySelector('.is-invalid');
             if (firstInvalid) {
               firstInvalid.focus();
+            }
+            return;
+          }
+
+          // Properly extract name, service, and date values from input fields BEFORE clearing/resetting
+          const clientName = nameInput.value.trim();
+          const selectedService = serviceInput.value;
+          const selectedDate = dateInput.value;
+
+          // Prepare form data for Formspree
+          const formData = new FormData(bookingForm);
+
+          // Hide any previous alert messages
+          if (successAlert) successAlert.style.display = 'none';
+          if (errorAlert) errorAlert.style.display = 'none';
+
+          // Loading State: disable submit button and change text to "Sending..."
+          let originalBtnText = 'Schedule Your Visit';
+          if (submitBtn) {
+            originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+          }
+
+          try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (!response.ok) {
+              throw new Error('Formspree response was not ok');
+            }
+
+            // Success State: display personalized thank-you message
+            if (bookedClientName) bookedClientName.textContent = clientName;
+            if (bookedService) bookedService.textContent = selectedService;
+            if (bookedDate) bookedDate.textContent = selectedDate;
+            if (bookingSuccessMsg) {
+              bookingSuccessMsg.innerHTML = `Thank you, <strong style="color:#0c4a6e;">${clientName}</strong>. We have logged your request for <strong style="color:#0c4a6e;">${selectedService}</strong> on <strong style="color:#0c4a6e;">${selectedDate}</strong>.`;
+            }
+
+            if (successAlert) {
+              successAlert.style.display = 'flex';
+              successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Clear/reset the form fields
+            bookingForm.reset();
+
+          } catch (err) {
+            // Failure State: display clear, helpful error message inside the notification box
+            console.error('Form submission failed:', err);
+            if (bookingErrorMsg) {
+              bookingErrorMsg.textContent = 'Something went wrong while submitting your request. Please call us directly at (512) 555-0199 to schedule your visit.';
+            }
+            if (errorAlert) {
+              errorAlert.style.display = 'flex';
+              errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          } finally {
+            // Re-enable the button after the attempt completes
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalBtnText;
             }
           }
         });
